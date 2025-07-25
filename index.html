@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+   <style>
+    *{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+    .centerflex
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+    .container
+    {
+        height: 500px;
+        width: 355px;
+        border: none;
+        background-color: transparent;
+        color: white;
+        position: relative;
+    }
+    .nav
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 228px;
+        margin: auto;
+        gap: 15px;
+        position: relative;
+        top: 28px;
+    }
+    .searchcity input{
+        padding: 8px;
+        border-radius: 14px;
+        background: #ebfffc;
+        border: none;
+    }
+    .searchbutton button{
+        border-radius: 50%;
+        border: none;
+    }
+    .middlephoto
+    {
+        text-align: center;
+        position: relative;
+        top:8vh;
+    }
+    .mainbody
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 232px;
+    }
+    .bottom
+    {
+        display: flex;
+        width: 238px;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .humidity
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .windspeed
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .bottomnames
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+    .humidityname{
+        position: relative;
+        left: 45px;
+    }
+    .temperature
+    {
+        font-size: 47px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+    }
+    .city{
+        position: relative;
+        top: 5px;
+        font-size: 35px;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .backvideo
+    {
+         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+   </style>
+</head>
+<body>
+    <div class="main">
+        <video autoplay loop muted class="backvideo" >
+            <source src="4514641-hd_1920_1080_30fps.mp4">
+        </video>
+        <div class="centerflex">
+            <div class="container">
+                <div class="nav">
+                    <div class="searchcity">
+                        <input type="text" placeholder="Search ">
+                    </div>
+                    <div class="searchbutton">
+                        <button><img src="search.png" alt="" height="24px"></button>
+                    </div>
+                </div>
+                <div class="middlephoto">
+                    <img src="clear.png" alt="" height="160px" id="weatherimg">
+                </div>
+                <div class="mainbody">
+                    <div class="temperature">22<sup>o</sup>c</div>
+                    <div class="city">
+                        Bengaluru
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="humidity">
+                        <img src="humidity.png" alt="" height="30px">
+                        <span class="humiditypercent">53%</span>
+                    </div>
+                    <div class="windspeed">
+                        <img src="wind.png" alt="" height="30px">
+                        <span class="windkmp">5.56 km/h</span>
+                    </div>
+                </div>
+                <div class="bottomnames">
+                    <div class="humidityname">
+                        Humidty
+                    </div>
+                    <span class="windspeedname">
+                        Wind speed
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
