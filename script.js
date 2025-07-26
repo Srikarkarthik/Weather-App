@@ -32,7 +32,7 @@ const url = "https://api.openweathermap.org/data/2.5/weather?units=metric"
             }
             else if (curWeatherpic === "Rain") {
                 document.querySelector("#weatherimg").src = "rain.png"
-                videoSource.src = "1841455-hd_1280_720_25fps.mp4"
+                videoSource.src = "1841455-hd_1280_720_25fps (1).mp4"
                 video.load()
             }
             else if (curWeatherpic === "Mist") {
